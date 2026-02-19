@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quadrado Interativo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .quadrado:hover {
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
-    <script src="index3.js"></script>
+    <div class="quadrado"></div>
 </body>
 </html>
