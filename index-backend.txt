@@ -1,0 +1,7 @@
+const db = require('./db');
+
+// Um teste simples de SELECT
+db.query('SELECT 1 + 1 AS solution', (err, results) => {
+  if (err) throw err;
+  console.log('A solução é: ', results[0].solution);
+});

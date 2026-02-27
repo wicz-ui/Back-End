@@ -1,0 +1,20 @@
+const mysql = require('mysql2');
+
+// Cria a configuração da conexão
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',      // seu usuário do MySQL
+  password: '',      // sua senha do MySQL (deixe vazio se não tiver)
+  database: 'LivrariaDigital' // o nome do banco que criamos antes
+});
+
+// Abre a conexão
+connection.connect((err) => {
+  if (err) {
+    console.error('Erro ao conectar: ' + err.stack);
+    return;
+  }
+  console.log('Conectado ao MySQL com sucesso!');
+});
+
+module.exports = connection;
