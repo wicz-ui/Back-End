@@ -1,0 +1,21 @@
+-- 1. Cria o banco de dados
+CREATE DATABASE LivrariaDigital;
+
+-- 2. Seleciona o banco para uso
+USE LivrariaDigital;
+
+-- 3. Cria a tabela de livros
+CREATE TABLE Livros (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(100) NOT NULL,
+    autor VARCHAR(50),
+    preco DECIMAL(10, 2),
+    estoque INT
+);
+
+-- 4. Insere os valores (O que você estava procurando!)
+INSERT INTO Livros (titulo, autor, preco, estoque)
+VALUES 
+    ('O Senhor dos Anéis', 'J.R.R. Tolkien', 79.90, 15),
+    ('Dom Casmurro', 'Machado de Assis', 35.00, 8),
+    ('1984', 'George Orwell', 42.50, 20);
