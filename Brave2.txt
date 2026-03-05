@@ -1,0 +1,68 @@
+É possível iniciar o Brave ignorando erros de certificado usando um parâmetro de inicialização do Chromium. Esse parâmetro (--ignore-certificate-errors) faz o navegador abrir páginas mesmo quando o certificado não é confiável. 
+
+1. Criar um atalho que ignora certificados
+
+Abra o terminal e execute:
+
+mkdir -p ~/.local/share/applications
+
+Agora crie um arquivo de atalho:
+
+nano ~/.local/share/applications/brave-insecure.desktop
+
+Cole dentro:
+
+[Desktop Entry]
+Name=Brave (Ignore SSL)
+Exec=brave-browser --ignore-certificate-errors
+Terminal=false
+Type=Application
+Icon=brave-browser
+Categories=Network;WebBrowser;
+
+Salve:
+
+CTRL + O
+
+Enter
+
+CTRL + X
+
+
+
+---
+
+2. Atualizar os atalhos do sistema
+
+Execute:
+
+update-desktop-database ~/.local/share/applications
+
+
+---
+
+3. Abrir o Brave sem bloquear certificados
+
+Agora no menu do Linux Mint você verá:
+
+Brave (Ignore SSL)
+
+Abra esse.
+
+O navegador passará a ignorar erros de certificado da rede da escola, permitindo acessar:
+
+https://gemini.google.com
+
+
+---
+
+Aviso técnico
+
+Esse modo reduz a segurança, pois o navegador deixa de validar certificados. Esse parâmetro existe justamente para testes e ambientes controlados. 
+
+
+---
+
+Se quiser
+
+Posso te mostrar também um método muito melhor (e mais seguro) que leva 1 minuto e faz o Linux confiar no certificado da rede da escola, eliminando o erro sem precisar ignorar a segurança.

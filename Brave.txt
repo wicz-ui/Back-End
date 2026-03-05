@@ -1,0 +1,73 @@
+Existem duas formas simples de instalar o Brave Browser no Linux Mint. A mais recomendada é pelo repositório oficial (APT), porque ele atualiza automaticamente junto com o sistema. 
+
+
+---
+
+1️⃣ Método recomendado (Terminal – oficial)
+
+Abra o Terminal e execute os comandos abaixo um por um.
+
+1. Instalar dependências
+
+sudo apt install curl
+
+2. Baixar a chave do repositório
+
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg \
+https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+3. Adicionar o repositório do Brave
+
+sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources \
+https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+
+4. Atualizar os pacotes
+
+sudo apt update
+
+5. Instalar o Brave
+
+sudo apt install brave-browser
+
+Depois disso ele aparece no Menu → Internet → Brave. 
+
+
+---
+
+2️⃣ Método super rápido (1 comando)
+
+Se quiser fazer tudo automaticamente:
+
+curl -fsS https://dl.brave.com/install.sh | sh
+
+Esse script instala e configura tudo sozinho. 
+
+
+---
+
+3️⃣ Para abrir o Brave pelo terminal
+
+brave-browser
+
+
+---
+
+✔️ Vantagem desse método:
+
+atualiza pelo apt update
+
+não usa Flatpak
+
+ocupa menos espaço
+
+
+
+---
+
+Se quiser, posso também mostrar:
+
+como instalar o Brave pelo gerenciador de aplicativos do Linux Mint (sem terminal)
+
+como importar favoritos do Chrome/Firefox
+
+como deixar o Brave como navegador padrão.
