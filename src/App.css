@@ -1,0 +1,23 @@
+/*App.css*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+}
+
+.pagina {
+  text-align: center;
+  padding: 30px;
+}
+
+img {
+  width: 200px;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+}
