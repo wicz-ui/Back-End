@@ -1,0 +1,92 @@
+import React from 'react';
+import { StyleSheet, Image, Text, View, Dimensions } from 'react-native';
+import bicolor from '../../assets/bicolor.jpg';
+import logo from '../../assets/logo.jpg';
+
+const { width, height } = Dimensions.get('window');
+
+export default function Cesta() {
+  return (
+    <View style={estilos.topo}>
+      <Image
+        source={bicolor}
+        style={estilos.imagemBicolor}
+        resizeMode="cover"
+      />
+
+      <Text style={estilos.texto}>Detalhe da Cesta</Text>
+
+      <View style={estilos.cesta}>
+        <Text style={estilos.titulo}>Cesta de Verduras</Text>
+
+        <View style={estilos.fazenda}>
+          <Image source={logo} style={estilos.imagemFazenda} />
+          <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
+        </View>
+
+        <Text style={estilos.frase}>
+          Uma cesta com produtos selecionados cuidadosamente da fazenda direto para sua cozinha
+        </Text>
+
+        <Text style={estilos.preco}>R$ 40,00</Text>
+      </View>
+    </View>
+  );
+}
+
+const estilos = StyleSheet.create({
+  topo: {
+    width: width,
+    flex: 1,
+  },
+
+  imagemBicolor: {
+    width: width,
+    height: height * 0.35,
+  },
+
+  texto: {
+    position: 'absolute',
+    top: 40,
+    left: 20,
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+
+  cesta: {
+    padding: 20,
+  },
+
+  titulo: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+
+  fazenda: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: 10,
+  },
+
+  imagemFazenda: {
+    width: 40,
+    height: 40,
+  },
+
+  nomeFazenda: {
+    marginLeft: 10,
+    fontSize: 16,
+  },
+
+  frase: {
+    marginTop: 20,
+    fontSize: 16,
+  },
+
+  preco: {
+    marginTop: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+});

@@ -1,0 +1,22 @@
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, View } from 'react-native';
+import Cesta from './src/Telas/cesta';
+
+export default function App() {
+  return (
+    <View style={estilos.container}>
+      <Cesta />
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const estilos = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+});
